@@ -1,0 +1,197 @@
+/* CUSTOM PROPERTIES */
+:root{
+    --principalC:#f4ae96;
+}
+
+
+/* GENERICO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    /* 1rem = 10px */
+    /* font-size: 62.5%; */
+}
+
+body {
+    /* font-size: 1.6rem; */
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* GLOBALES */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header{
+    padding: .5rem 1rem;
+    width: 100%;
+    height: 4.5rem;
+    position: fixed;
+    top: 0;left: 0;
+    background: #fff;
+    box-shadow: 3px 2px 5px 2px rgba(0,0,0,0.21);
+    z-index: 10000;
+
+    overflow-y: hidden;
+}
+
+.header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .nav .logo{
+    overflow: hidden;
+    transition: .5s;
+}
+.header .nav .logo:hover{
+    transform: scale(110%);
+}
+.header .nav .logo img{
+    width: 6rem;
+    height: 100%;
+    cursor: pointer;
+}
+.header .nav .nav-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .nav .nav-list li{
+    display: block;
+    margin: 0 12px;
+    padding: 5px 10px;
+}
+
+.header .nav .nav-list li a{
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .5s ;
+}
+.header .nav .nav-list li a:hover{
+    color: var(--principalC);
+}
+.header .nav .nav-list li a::after{
+    display: block;
+    content: "";
+    width: 0%;
+    height: .2rem;
+    background:var(--principalC);
+    transition: .2s linear;
+}
+
+.header .nav .nav-list li a:hover::after{
+    width: 100%;
+}
+
+.header .nav .icons i{
+    color: black;
+    font-size: 1.2rem;
+    margin: 0 .4rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.header .nav .icons i:hover{
+    color: var(--principalC);
+
+}
+
+/* MAIN */
+
+.main{
+    display: flex;
+    justify-content: space-around   ;
+    align-items: center;
+    position: relative;
+    padding:10rem 5rem;
+    overflow: hidden;
+    height: 100vh;
+}
+.main .main__text h1{
+    font-size: 3.5rem;
+    position: relative;
+    top: 0;
+    margin:0 0 4rem 0;
+}
+
+.main .main__text h1 span{
+    color: #ffcb44;
+    font-weight: bold;
+    font-family: mv boli;
+    font-size: 5rem;
+    line-height: 22px;
+
+}
+.main .main__img{
+    max-width: 120rem;
+}
+.main .main__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    padding-left: 5rem;
+}
+
+.btn{
+    background: var(--principalC);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    color: black;
+    border-radius: 5rem;
+    font-weight: bold;
+}
+.main__btn{
+    display: flex;
+    top: 0;
+    margin: 4rem 0 0 0;
+}
+.main__btn i{
+    transition: .4s;
+}
+.main__btn:hover i{
+    transform: translate(.5rem);
+}
+
+/* ABOUT */
+/* FOOTER */
+
+/* RESPONSIVE
+========================================================================= / */
+
+/* Tablets en horizonal y escritorios normales 
+------------------------------------------------------------------------- */
+
+@media (max-width: 1199px) {
+    .main{
+        flex-direction: column-reverse;
+    }
+}
+
+/*Móviles/  en horizontal o tablets en vertical
+------------------------------------------------------------------------- */
+@media (max-width: 767px) { 
+
+}
+
+/* Móviles en vertical
+------------------------------------------------------------------------- */
+@media (max-width: 480px) { 
+
+}
